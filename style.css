@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+  font-weight: light;
+}
+h1 {
+  font-size: 25px;
+}
+
+body {
+  padding: 0%;
+  margin: 0%;
+  background: linear-gradient(to right, green, gold, purple, blue, yellow);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.calculator-grid > button {
+  padding: 10px 0;
+  font-size: calc(1rem + 0.5vw);
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+/* Modify this part of your existing CSS */
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  min-height: 10vh; /* Use vh for a more responsive design */
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
+
+/* Add this code to your existing CSS */
+
+.calculator-grid {
+  width: 50vw;
+  height: 50vw;
+  max-width: 800px; /* Adjust this value */
+  min-width: 300px;
+  max-height: 667px; /* Adjust this value */
+  min-height: 500px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto repeat(5, 1fr);
+  grid-gap: 0;
+}
+
+@media (max-width: 600px) {
+  .output .previous-operand {
+    font-size: 1.2rem;
+  }
+
+  .output .current-operand {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .output .previous-operand {
+    font-size: 1rem;
+  }
+
+  .output .current-operand {
+    font-size: 1.5rem;
+  }
+}
