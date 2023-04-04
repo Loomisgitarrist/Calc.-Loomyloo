@@ -64,9 +64,9 @@ body {
 .calculator-grid {
   width: 50vw;
   height: 50vw;
-  min-width: 80vw;
-  max-width: 80vw;
-  min-height: 80vh;
+  min-width: 55vw;
+  max-width: 55vw;
+  min-height: 60vh;
   max-height: 80vh;
   display: grid;
   justify-content: center;
